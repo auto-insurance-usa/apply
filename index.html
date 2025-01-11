@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Insurance Eligibility Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-specific {
+      background: linear-gradient(to right, #ff0000, #ff4d4d);
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .highlight-specific {
+      color: yellow;
+      font-weight: bold;
+    }
+
+    .form-container-specific {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .form-question-specific {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .form-options-specific {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-option-button-specific {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-option-button-specific:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden-specific {
+      display: none;
+    }
+
+    .form-success-message-specific {
+      font-size: 20px;
+      font-weight: bold;
+      color: #28a745;
+      margin-top: 20px;
+    }
+
+    .reviews-container {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .review {
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    .review-author {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .additional-image {
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-specific">
+    <span class="highlight-specific" id="saved-count">64,556</span> Americans Saved on Auto Insurance TODAY <span id="current-date"></span>
+  </div>
+
+  <img src="https://i.postimg.cc/Xq3VfZ5m/A-adir-un-t-tulo-1.png" alt="Main Banner" class="additional-image">
+
+  <div class="form-container-specific">
+    <div id="step-1-specific" class="step-specific">
+      <div class="form-question-specific">Do you feel like you are paying too much for your car insurance without getting the benefits you need?</div>
+      <div class="form-options-specific">
+        <button class="form-option-button-specific" onclick="nextStepSpecific(1)">Yes, I think I pay too much</button>
+        <button class="form-option-button-specific" onclick="nextStepSpecific(1)">I could get a better deal</button>
+      </div>
+    </div>
+
+    <div id="step-2-specific" class="step-specific hidden-specific">
+      <div class="form-question-specific">Would you like to know if you qualify for exclusive discounts based on your age or driving experience?</div>
+      <div class="form-options-specific">
+        <button class="form-option-button-specific" onclick="nextStepSpecific(2)">Yes, please</button>
+        <button class="form-option-button-specific" onclick="nextStepSpecific(2)">I have nothing to lose</button>
+      </div>
+    </div>
+
+    <div id="step-3-specific" class="step-specific hidden-specific">
+      <div class="form-question-specific">Are you confident that your current policy fully protects you in case of an accident or unforeseen event?</div>
+      <div class="form-options-specific">
+        <button class="form-option-button-specific" onclick="finishFormSpecific()">I am not sure</button>
+        <button class="form-option-button-specific" onclick="finishFormSpecific()">I think I might not be protected</button>
+      </div>
+    </div>
+
+    <div id="success-message-specific" class="form-success-message-specific hidden-specific">
+      You meet the requirements 🎉🥳!
+    </div>
+  </div>
+
+  <div class="reviews-container">
+    <h2>Recent Customer Feedback:</h2>
+    <div class="review">"Thanks to this site, I found the perfect insurance and saved so much. Now I have more to enjoy my retirement!"<span class="review-author">- Maria Rodriguez, 68</span></div>
+    <div class="review">"The difference in my monthly expenses was amazing. More money for trips and spending time with family!"<span class="review-author">- John Carter, 72</span></div>
+    <div class="review">"I never thought finding affordable insurance would be this easy. Highly recommend it for anyone over 50!"<span class="review-author">- Laura Simmons, 63</span></div>
+    <div class="review">"Wish I knew about this sooner. The savings on my auto insurance have been substantial!"<span class="review-author">- Ramona Rodriguez</span></div>
+  </div>
+
+  <img src="https://i.postimg.cc/dVtS7GWp/download-66.png" alt="Additional Banner" class="additional-image">
+
+  <footer>
+    Disclaimer: This is an advertorial and not an actual news article, blog, or consumer protection update. Our aim is to bring consumers the best information that may help them make informed decisions. This article is for demonstration purposes only. By proceeding forward you automatically agree to our <a href="#">terms and conditions</a>. The purpose of this site is the solicitation of insurance. This site is not a part of the Facebook website or Facebook Inc. This site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/confetti.browser.min.js"></script>
+  <script>
+    let currentStepSpecific = 1;
+
+function nextStepSpecific(step) {
+  document.getElementById(`step-${step}-specific`).classList.add('hidden-specific');
+  document.getElementById(`step-${step + 1}-specific`).classList.remove('hidden-specific');
+  focusScrollSpecific(step + 1);
+}
+
+function finishFormSpecific() {
+  document.getElementById(`step-3-specific`).classList.add('hidden-specific');
+  document.getElementById('success-message-specific').classList.remove('hidden-specific');
+  launchConfettiSpecific();
+
+  // Redirect after 3 seconds
+  setTimeout(() => {
+    window.location.href = "https://www.jk8gcxs.com/5QG9DQ1/68W3CMH/";
+  }, 3000);
+}
+
+function focusScrollSpecific(step) {
+  document.getElementById(`step-${step}-specific`).scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function launchConfettiSpecific() {
+  const confettiSettings = { target: document.body, clock: 25, max: 100 };
+  const confetti = new ConfettiGenerator(confettiSettings);
+  confetti.render();
+
+  setTimeout(() => confetti.clear(), 5000); // Clear confetti after 5 seconds
+}
+
+// Set the current date
+const currentDateElement = document.getElementById('current-date');
+const currentDate = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+currentDateElement.textContent = currentDate.toLocaleDateString('en-US', options);
+
+  </script>
+</body>
+</html>
